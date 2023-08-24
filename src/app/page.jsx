@@ -13,6 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // Images
 import logo from '@logos/primary-logo.png';
+import PdfGenerator from '@components/PdfGenerate';
 
 export default function Home() {
   const [user, setUser] = useState('');
@@ -60,6 +61,7 @@ export default function Home() {
   return (
     <main className="h-screen w-full flex items-center justify-center">
       <div className="w-auto max-w-md text-center">
+        <PdfGenerator></PdfGenerator>
         <div className="flex justify-center">
           <Image src={logo} width={'auto'} height={'auto'} alt="logo" />
         </div>
