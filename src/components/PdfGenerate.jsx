@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   section: {
-    margin: 10,
-    padding: 10,
+    margin: 20,
+    padding: 20,
     flexGrow: 1,
   },
   header: {
@@ -26,10 +26,8 @@ const PdfGenerator = () => {
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
-          {/* Renderiza el contenido de la vista actual aquí */}
           <Text style={styles.header}>Welcome to My App</Text>
           <View>
-            {/* Puedes agregar más componentes aquí para tu contenido */}
             <Text>Este es un ejemplo de contenido.</Text>
             <Text>{data}</Text>
           </View>
@@ -41,7 +39,6 @@ const PdfGenerator = () => {
   return (
     <div>
       <div>
-        {/* Utiliza PDFDownloadLink para descargar el PDF generado */}
         <PDFDownloadLink document={<PDFContent />} fileName="my_app_report.pdf">
           {({ loading }) => (loading ? 'Generando PDF...' : 'Descargar PDF')}
         </PDFDownloadLink>
